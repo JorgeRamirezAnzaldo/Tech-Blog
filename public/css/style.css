@@ -1,0 +1,98 @@
+header {
+    display: flex;
+    flex-wrap:wrap;
+    align-items: center;
+    background-color: black;
+    height: 220px;
+}
+
+.break {
+    flex-basis: 100%;
+    height: 0;
+  }
+
+nav {
+    margin-left: 40px;
+    margin-top: 30px;
+}
+
+nav a {
+    color:  rgb(200, 231, 200);
+    text-decoration: none;
+    font-size: 22px;
+    margin-right: 20px;
+}
+
+header h1{
+    background-color: rgb(200, 231, 200);
+    color: black;
+    width: 300px;
+    margin-left: 40px;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    box-shadow: 10px 5px 2px rgb(153, 153, 153);
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+  }
+
+body {
+    background-color: rgb(200, 231, 200);
+}
+
+.login {
+    border-style:solid;
+    width:600px;
+}
+
+.login h2{
+    background-color: black;
+    color: rgb(200, 231, 200);
+    height: 50px;
+    padding-left:30px;
+}
+
+.login-form{
+    height:350px;
+}
+
+.form label{
+    padding-left:30px;
+    font-size: 22px;
+    font-weight:bold;
+}
+
+.form input, .form button{
+    width:500px;
+    margin-left:30px;
+}
+
+.form button{
+    background-color: rgb(117, 114, 114);
+    color:white;
+    font-size:20px;
+    margin-top: 15px;
+}
+
+.login a{
+    display:block;
+    font-size: 20px;
+    margin-top: 30px;
+    margin-left:30px;
+    color:blue;
+    font-weight:bold;
+
+}
+
+.posts {
+    flex: 4;
+    padding: 50px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
