@@ -92,7 +92,62 @@ body {
     flex: 4;
     padding: 50px;
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column wrap;
     justify-content: center;
     align-items: center;
+}
+
+.post{
+    width: 800px;
+    text-decoration:none;
+    border-width: 5px;
+}
+
+.post header{
+    color:rgb(200, 231, 200);
+    height: 60px;
+    padding-left: 30px;
+    justify-content: space-between;
+}
+
+.post a:hover{
+    opacity:1;
+    text-decoration:none;
+
+  }
+
+.post p{
+    color:black;
+    padding-left: 30px;
+    margin-top:10px;
+    padding-top: 10px;
+}
+
+.post h6{
+    color:white;
+    padding-right:10px;
+}
+
+#form-comment label{
+    margin-left: 20px;
+}
+
+#form-comment .textarea{
+    margin-left: 20px;
+ 
+}
+
+#form-comment textarea{
+    margin-top:10px;
+    width:760px;
+    height:80px;
+}
+
+#form-comment button{
+    width:760px;
+    margin-left:20px;
+    background-color:grey;
+    border-radius: 5px;
+    color:white;
+    height:30px;
 }
