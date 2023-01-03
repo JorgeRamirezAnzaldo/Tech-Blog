@@ -1,7 +1,7 @@
 //Import router from express
 const router = require('express').Router();
 //Import Post and Comment models
-const { Post, Comment } = require('../models');
+const { Post, Comment, User } = require('../models');
 //Import middleware to validate authorization
 const withAuth = require("../utils/auth.js");
 
@@ -12,9 +12,9 @@ router.get('/', async (req, res) => {
         //Bring Comment data related to the post
         include: [
           {
-            model: Comment, //Use the Comment model
-            attributes: ['content'], //Bring the content of the comments
-          },
+            model: User,
+            attributes: ['username'],
+          }
         ],
       });
   
@@ -41,12 +41,23 @@ router.get('/post/:id', withAuth, async (req, res) => { //Use the middleware to 
             {
               model: Comment, //Use the Comment model
               attributes: ['content', 'user_id', 'post_id', 'creation_date'], //Bring the data of the comments
+              include: [
+                {
+                  model: User,
+                  attributes: ['username'],
+                }
+              ],
             },
+            {
+              model: User,
+              attributes: ['username'],
+            }
           ],
         });
         const post = postData.get({ plain: true }); //Convert the data to plain text
         //Render the post view with the post obtained from database
         res.render('post', { post, loggedIn: req.session.loggedIn }); //Send the loggedIn session variable
+        //res.status(200).json(postData);
       } catch (err) { //Catch any problem/error
         res.status(500).json(err); //Respond with 500 status and the problem/error
       }
@@ -60,6 +71,27 @@ router.get('/login', (req, res) => {
     }
     res.render('login'); //If the user is not logged in, then render the login view
   });
+
+//POST route to create a new comment
+router.post('/comment', withAuth, async (req, res) => { //Use the middleware to validate authorization
+  try {
+      const userData = await User.findOne({ //Find the user id using the username that is connected
+        where: {
+          username:req.session.username, //Use the username saved in the session
+        }
+      });
+      const user = userData.get({ plain: true }); //Convert to plain data
+      const commentData = await Comment.create({ //Create comment in database with complete data
+        content : req.body.content,
+        user_id : user.id,
+        post_id : req.body.post_id,
+        creation_date : req.body.creation_date,
+      })
+      res.status(200).json(commentData); //Respond with status 200 and the new comment created
+    } catch (err) { //Catch any error
+      res.status(500).json(err); //Respond with status 500 if there is a problem/error
+    }
+});
 
 //Export router with corresponding routes
 module.exports = router;
