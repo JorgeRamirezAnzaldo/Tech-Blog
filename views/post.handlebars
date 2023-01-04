@@ -9,6 +9,7 @@
   {{> comment-details}}
 {{/each}}
 
+{{#if loggedIn}}
 <section class = "card post">
   <header></header>
   <form id="form-comment" data-index="{{post.id}}">
@@ -24,3 +25,4 @@
   </form>
 </section>
 <script src="/js/comment.js"></script>
+{{/if}}

@@ -33,7 +33,7 @@ router.get('/', async (req, res) => {
   });
 
 //GET route to obtain one post
-router.get('/post/:id', withAuth, async (req, res) => { //Use the middleware to validate authorization
+router.get('/post/:id', async (req, res) => { //Use the middleware to validate authorization
     try {
         const postData = await Post.findByPk(req.params.id, { //Find a post in the database using the id
         //Bring Comment data related to the post
