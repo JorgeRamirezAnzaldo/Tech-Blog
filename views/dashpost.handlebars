@@ -1,17 +1,20 @@
-<section class="card post">
-  <header>
-      <h4>{{post.title}}</h4>
-      <h6>Posted by {{post.user.username}} on {{format_date post.creation_date}}</h6>
-  </header>
-  <p>{{post.content}}</p>
-</section>
-
 <section class = "card post">
-  <form id="form-comment" data-index="{{post.id}}">
+  <header>
+    <h4>Edit Post</h4>
+  </header>
+  <form id="form-postupdate" class="creationforms">
     <div class="form-group">
-      <button type = "submit">Update</button>
-      <button type = "submit">Delete</button>
+        <label for="updatetitle-input">Title</label>
+        <input class="form-input" type="text" id="updatetitle-input" value="{{post.title}}"/>
+    </div>
+    <div class="form-group">
+        <label for="updateontent-input">Content</label>
+        <textarea id="updatecontent-input">{{post.content}}</textarea>
+    </div>
+    <div class="form-group">
+      <button type = "click" id="updatebtn" data-index="{{post.id}}">Update Post</button>
+      <button type = "click" id="deletebtn" data-index="{{post.id}}">Delete</button>
     </div>
   </form>
 </section>
-<script src="/js/dashboard.js"></script>
+<script src="/js/postmodify.js"></script>

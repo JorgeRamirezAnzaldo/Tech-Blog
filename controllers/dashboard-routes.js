@@ -92,5 +92,45 @@ router.post('/', withAuth, async (req, res) => {
       }
     });
 
+//PUT route to update a post 
+router.put('/:id', withAuth, async (req, res) => {
+  try {
+      const postData = await Post.update({ //Update post in database with data
+        title : req.body.title,
+        content : req.body.content,
+      },
+      {
+        where: {
+          id : req.params.id, //Use the id to update a single post
+        }
+      }
+      )
+      res.status(200).json(postData); //Respond with status 200 and the data
+    } catch (err) { //Catch any error
+      res.status(500).json(err); //Respond with status 500 if there is a problem/error
+    }
+  });
+
+//DELETE route to delete a post
+router.delete('/:id', async (req, res) => {
+  try {
+    //Delete a post by its id value
+    const deletePost = await Post.destroy({
+      where: {
+        id: req.params.id, //Get the post id from the request parameters
+      },
+    });
+    if (!deletePost) { //If no post was found for the id
+      res.status(404).json({ message: 'No post found with this id!' }); //Respond with status 404 and proper message
+      return;
+    }
+    res.status(200).json(deletePost); //Respond with status 200 and the result from the deletion
+  } catch (err) { //Catch any error
+    res.status(500).json(err); //Respond with status 500 if there is a problem/error
+  }
+});
+
+
+
 //Export router with corresponding routes
 module.exports = router;
