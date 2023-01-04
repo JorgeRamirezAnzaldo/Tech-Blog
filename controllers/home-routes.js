@@ -1,6 +1,6 @@
 //Import router from express
 const router = require('express').Router();
-//Import Post and Comment models
+//Import Post, Comment and User models
 const { Post, Comment, User } = require('../models');
 //Import middleware to validate authorization
 const withAuth = require("../utils/auth.js");
@@ -71,6 +71,13 @@ router.get('/login', (req, res) => {
     }
     res.render('login'); //If the user is not logged in, then render the login view
   });
+
+  //GET route to log out
+router.get('/logout', (req, res) => {
+    res.redirect('/'); //redirect to home
+});
+
+
 
 //POST route to create a new comment
 router.post('/comment', withAuth, async (req, res) => { //Use the middleware to validate authorization
