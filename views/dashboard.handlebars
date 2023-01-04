@@ -1,0 +1,12 @@
+{{#each posts as |post|}}
+{{> dashpost-details}}
+{{/each}}
+
+<section id="seccreation">
+  <form id="form-buttoncreate" class="creationforms">
+    <div class="form-group">
+      <button type = "submit" id="creationbutton">+New Post</button>
+    </div>
+  </form>
+</section>
+<script src="/js/dashboard.js"></script>

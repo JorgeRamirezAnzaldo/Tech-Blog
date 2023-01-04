@@ -1,0 +1,17 @@
+<section class="card post">
+  <header>
+      <h4>{{post.title}}</h4>
+      <h6>Posted by {{post.user.username}} on {{format_date post.creation_date}}</h6>
+  </header>
+  <p>{{post.content}}</p>
+</section>
+
+<section class = "card post">
+  <form id="form-comment" data-index="{{post.id}}">
+    <div class="form-group">
+      <button type = "submit">Update</button>
+      <button type = "submit">Delete</button>
+    </div>
+  </form>
+</section>
+<script src="/js/dashboard.js"></script>
