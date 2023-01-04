@@ -1,9 +1,10 @@
+<!--Partial view to display a post in the home-->
 <section class="card post">
-  <a href="/post/{{id}}">
+  <a href="/post/{{id}}"> <!--Use an <a> tag as envelope-->
     <header>
-      <h4>{{title}}</h4>
-      <h6>Posted by {{user.username}} on {{format_date creation_date}}</h6>
+      <h4>{{title}}</h4> <!--Set post title-->
+      <h6>Posted by {{user.username}} on {{format_date creation_date}}</h6> <!--Set username and creation date with format-->
     </header>
-    <p>{{content}}</p>
+    <p>{{content}}</p> <!--Set post content-->
   </a>
 </section>

@@ -1,28 +1,29 @@
+<!--View for single post display from home-->
 <section class="card post">
   <header>
-      <h4>{{post.title}}</h4>
-      <h6>Posted by {{post.user.username}} on {{format_date post.creation_date}}</h6>
+      <h4>{{post.title}}</h4> <!--Set post title-->
+      <h6>Posted by {{post.user.username}} on {{format_date post.creation_date}}</h6> <!--Create heading with username and date with format-->
   </header>
-  <p>{{post.content}}</p>
+  <p>{{post.content}}</p> <!--Set post content-->
 </section>
-{{#each post.comments as |comment|}}
-  {{> comment-details}}
+{{#each post.comments as |comment|}} <!--Place all comments for post-->
+  {{> comment-details}} <!--Use the partials for comments-->
 {{/each}}
 
-{{#if loggedIn}}
-<section class = "card post">
+{{#if loggedIn}} <!--If logged in-->
+<section class = "card post"> <!--Display the form to create a new comment-->
   <header></header>
   <form id="form-comment" data-index="{{post.id}}">
     <div class="form-group">
         <label for="comment-input">Comment</label>
         <div class="textarea">
-          <textarea id="comment-input" placeholder = "Introduce your comment here"></textarea>
+          <textarea id="comment-input" placeholder = "Introduce your comment here"></textarea> <!--Text area for the comment content-->
         </div>
     </div>
     <div class="form-group">
-      <button type = "submit">Submit</button>
+      <button type = "submit">Submit</button> <!--Submit button to create a new comment for the post-->
     </div>
   </form>
 </section>
-<script src="/js/comment.js"></script>
+<script src="/js/comment.js"></script> <!--Include comment.js script-->
 {{/if}}

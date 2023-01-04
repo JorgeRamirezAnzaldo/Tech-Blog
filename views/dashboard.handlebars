@@ -1,12 +1,12 @@
-{{#each posts as |post|}}
-{{> dashpost-details}}
+{{#each posts as |post|}} <!--Place all posts-->
+{{> dashpost-details}} <!--Use the partials to display all posts in dashboard-->
 {{/each}}
 
 <section id="seccreation">
-  <form id="form-buttoncreate" class="creationforms">
+  <form id="form-buttoncreate" class="creationforms"> <!--Inclue form to place New Post button-->
     <div class="form-group">
-      <button type = "submit" id="creationbutton">+New Post</button>
+      <button type = "submit" id="creationbutton">+New Post</button> <!--Place button to change to post creation view-->
     </div>
   </form>
 </section>
-<script src="/js/dashboard.js"></script>
+<script src="/js/dashboard.js"></script> <!--Include dashboard.js script-->

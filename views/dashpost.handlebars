@@ -1,20 +1,21 @@
+<!--View for each post when clicking over it to update/delete post-->
 <section class = "card post">
   <header>
     <h4>Edit Post</h4>
   </header>
-  <form id="form-postupdate" class="creationforms">
+  <form id="form-postupdate" class="creationforms"> <!--Form used to update/delete post-->
     <div class="form-group">
         <label for="updatetitle-input">Title</label>
-        <input class="form-input" type="text" id="updatetitle-input" value="{{post.title}}"/>
+        <input class="form-input" type="text" id="updatetitle-input" value="{{post.title}}"/> <!--Input for updated title-->
     </div>
     <div class="form-group">
         <label for="updateontent-input">Content</label>
-        <textarea id="updatecontent-input">{{post.content}}</textarea>
+        <textarea id="updatecontent-input">{{post.content}}</textarea> <!--Text area for updated content-->
     </div>
     <div class="form-group">
-      <button type = "click" id="updatebtn" data-index="{{post.id}}">Update Post</button>
-      <button type = "click" id="deletebtn" data-index="{{post.id}}">Delete</button>
+      <button type = "click" id="updatebtn" data-index="{{post.id}}">Update Post</button> <!--Button to update post-->
+      <button type = "click" id="deletebtn" data-index="{{post.id}}">Delete</button> <!--Button to delete post-->
     </div>
   </form>
 </section>
-<script src="/js/postmodify.js"></script>
+<script src="/js/postmodify.js"></script> <!--Include postmodify.js script-->

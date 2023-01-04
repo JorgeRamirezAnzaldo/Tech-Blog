@@ -1,3 +1,4 @@
+<!--Layout/main view-->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,34 +6,35 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tech Blog</title>
+  <!--Include stylesheets-->
   <link rel="stylesheet" type="text/css" href="/css/jass.css">
   <link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
 
 <body>
   <header>
+    <!--Set navigation bar with links-->
     <nav>
       <a href="/">Home</a>    
       <a href="/dashboard">Dashboard</a>
-      {{#if loggedIn}}
-      {{else}}  
-        <a href="/login">Login</a>
+      {{#if loggedIn}} <!--If user is logged in-->
+      {{else}}  <!--If user is not logged in-->
+        <a href="/login">Login</a>  <!--Display the login link-->
       {{/if}}
       <a href="/logout" id = "logout">Logout</a>
     </nav>
     <div class="break"></div>
-    <h1>The Tech Blog</h1>
+    <h1>The Tech Blog</h1> <!--Set the main heading-->
   </header>
   
   <main>
     <div class="posts">
-      {{{body}}}
+      {{{body}}} <!--Set the body to render multiple views-->
     </div>
   </main>
-  {{#if loggedIn}}
-  <script src="/js/logout.js"></script>
+  {{#if loggedIn}} <!--If the user is logged in-->
+  <script src="/js/logout.js"></script> <!--Enable logout.js script-->
   {{/if}}
-  <!--<script src="/js/main.js"></script>-->
 </body>
 
 </html>
