@@ -1,3 +1,4 @@
+/*Properties for the header*/
 header {
     display: flex;
     flex-wrap:wrap;
@@ -6,16 +7,19 @@ header {
     height: 220px;
 }
 
+/*Properties for the element with break class*/
 .break {
     flex-basis: 100%;
     height: 0;
   }
 
+/*Properties for the navigation menu*/
 nav {
     margin-left: 40px;
     margin-top: 30px;
 }
 
+/*Properties for the <a> tags in navigation menu*/
 nav a {
     color:  rgb(200, 231, 200);
     text-decoration: none;
@@ -23,6 +27,7 @@ nav a {
     margin-right: 20px;
 }
 
+/*Properties for the heading <h1> in header*/
 header h1{
     background-color: rgb(200, 231, 200);
     color: black;
@@ -34,21 +39,25 @@ header h1{
     box-shadow: 10px 5px 2px rgb(153, 153, 153);
 }
 
+/*Properties for the main*/
 main {
     display: flex;
     flex-wrap: wrap;
     flex-grow: 1;
   }
 
+/*Properties for the body*/
 body {
     background-color: rgb(200, 231, 200);
 }
 
+/*Properties for the element with login class*/
 .login {
     border-style:solid;
     width:600px;
 }
 
+/*Properties for the <h2> elements inside elements with class login*/
 .login h2{
     background-color: black;
     color: rgb(200, 231, 200);
@@ -56,21 +65,25 @@ body {
     padding-left:30px;
 }
 
+/*Properties for the login-form*/
 .login-form{
     height:350px;
 }
 
+/*Properties for the labels in element with form class*/
 .form label{
     padding-left:30px;
     font-size: 22px;
     font-weight:bold;
 }
 
+/*Properties for the input and button in element with form class*/
 .form input, .form button{
     width:500px;
     margin-left:30px;
 }
 
+/*Properties for the button in element with form class*/
 .form button{
     background-color: rgb(117, 114, 114);
     color:white;
@@ -78,6 +91,7 @@ body {
     margin-top: 15px;
 }
 
+/*Properties for <a> elements in elements with login class*/
 .login a{
     display:block;
     font-size: 20px;
@@ -88,6 +102,7 @@ body {
 
 }
 
+/*Properties for <a> elements in elements with login class*/
 .posts {
     flex: 4;
     padding: 50px;
@@ -97,25 +112,37 @@ body {
     align-items: center;
 }
 
+/*Properties for the element with post class*/
 .post{
     width: 800px;
     text-decoration:none;
     border-width: 5px;
 }
 
+/*Properties for the header in elements with post class*/
 .post header{
     color:rgb(200, 231, 200);
     height: 60px;
     padding-left: 30px;
     justify-content: space-between;
+
 }
 
+/*Properties for <a> elements in elements with post class*/
+.post a{
+    opacity:0.9;
+    text-decoration:none;
+
+  }
+
+/*Properties for hovering over <a> elements in elements with post class*/
 .post a:hover{
     opacity:1;
     text-decoration:none;
 
   }
 
+/*Properties for <p> elements in elements with post class*/
 .post p{
     color:black;
     padding-left: 30px;
@@ -123,20 +150,24 @@ body {
     padding-top: 10px;
 }
 
+/*Properties for <h6> elements in elements with post class*/
 .post h6{
     color:white;
     padding-right:10px;
 }
 
+/*Properties for <label> elements in elements with form-comment id*/
 #form-comment label{
     margin-left: 20px;
 }
 
+/*Properties for elements with textarea class in elements with form-comment id*/
 #form-comment .textarea{
     margin-left: 20px;
  
 }
 
+/*Properties for textarea elements in elements with form-comment id*/
 #form-comment textarea{
     margin-top:10px;
     width:760px;
@@ -144,6 +175,7 @@ body {
     resize:none;
 }
 
+/*Properties for <button> elements in elements with form-comment id*/
 #form-comment button{
     width:760px;
     margin-left:20px;
@@ -153,6 +185,7 @@ body {
     height:30px;
 }
 
+/*Properties for element with dashpost class*/
 .dashpost{
     width: 800px;
     text-decoration:none;
@@ -160,6 +193,7 @@ body {
     border-style:none;
 }
 
+/*Properties for header in element with dashpost class*/
 .dashpost header{
     justify-content:space-between;
     background-color: grey;
@@ -167,29 +201,35 @@ body {
     border-radius:5px;
 }
 
+/*Properties for <h4> and <h6> elements with dashpost class*/
 .dashpost h4, .dashpost h6{
     color:white;
     display:inline-block;
 }
 
+/*Properties for <h4> element in element with dashpost class*/
 .dashpost h4{
     margin-left:30px;
 }
 
+/*Properties for <h6> element in element with dashpost class*/
 .dashpost h6{
     margin-right:30px;
 }
 
+/*Properties when hovering over <a> element in element with dashpost class*/
 .dashpost a:hover{
     opacity:1;
     text-decoration:none;
 
   }
 
+/*Properties for element with seccreation id*/
 #seccreation{
     margin-top:50px;
 }
 
+/*Properties for element with creationbutton id*/
 #creationbutton{
     width: 150px;
     height:40px;
@@ -199,11 +239,13 @@ body {
     border-radius:8px;
   }
 
+/*Properties for <label> elements in elements with form-postcreation id*/
 #form-postcreation label{
     margin-left: 20px;
     font-weight:600;
 }
 
+/*Properties for <button> elements in elements with form-postcreation id*/
 #form-postcreation button{
     width:760px;
     margin-left:20px;
@@ -213,6 +255,7 @@ body {
     height:30px;
 }
 
+/*Properties for elements with posttitle-input id in elements with form-postcreation id*/
 #form-postcreation #posttitle-input{
     margin-top:10px;
     width:760px;
@@ -221,6 +264,7 @@ body {
     font-size:22px;
 }
 
+/*Properties for elements with postcontent-input id in elements with form-postcreation id*/
 #form-postcreation #postcontent-input{
     margin-top:10px;
     width:760px;
@@ -230,11 +274,13 @@ body {
     resize:none;
 }
 
+/*Properties for <button> elements in elements with form-postupdate id*/
 #form-postupdate label{
     margin-left: 20px;
     font-weight:600;
 }
 
+/*Properties for <button> elements in elements with form-postupdate id*/
 #form-postupdate button{
     width:760px;
     margin-left:20px;
@@ -245,6 +291,7 @@ body {
     margin-top:10px;
 }
 
+/*Properties for elements with updatetitle-input id in elements with form-postupdate id*/
 #form-postupdate #updatetitle-input{
     margin-top:10px;
     width:760px;
@@ -253,6 +300,7 @@ body {
     font-size:22px;
 }
 
+/*Properties for elements with updatecontent-input id in elements with form-postupdate id*/
 #form-postupdate #updatecontent-input{
     margin-top:10px;
     width:760px;
