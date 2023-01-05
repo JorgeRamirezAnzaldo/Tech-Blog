@@ -66,7 +66,7 @@ router.get('/post/:id', async (req, res) => { //Use the middleware to validate a
 //GET route to log in
 router.get('/login', (req, res) => {
     if (req.session.loggedIn) { //If the user is logged in
-      res.redirect('/'); //redirect to home
+      res.redirect('/dashboard'); //redirect to dashboard
       return;
     }
     res.render('login'); //If the user is not logged in, then render the login view

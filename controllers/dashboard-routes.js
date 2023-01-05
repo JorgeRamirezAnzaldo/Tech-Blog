@@ -112,7 +112,7 @@ router.put('/:id', withAuth, async (req, res) => {
   });
 
 //DELETE route to delete a post
-router.delete('/:id', async (req, res) => {
+router.delete('/:id', withAuth, async (req, res) => {
   try {
     //Delete a post by its id value
     const deletePost = await Post.destroy({

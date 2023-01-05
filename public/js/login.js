@@ -31,7 +31,7 @@ const FormHandler = async (event) => {
                 });
             
                 if (responselogin.ok) { //If response was ok
-                    document.location.replace('/'); //Replace the document location with home
+                    document.location.replace('/dashboard'); //Replace the document location with dashboard
                 } else { //If response was not ok
                     alert('Failed to log in.'); //Display an alert when the log in failed
                 }
@@ -45,7 +45,7 @@ const FormHandler = async (event) => {
                 });
             
                 if (responsesignup.ok) { //If response was ok
-                    document.location.replace('/'); //Replace the document location with home
+                    document.location.replace('/dashboard'); //Replace the document location with dashboard
                 } else { //If response was not ok
                     alert('Failed to sign up.'); //Display an alert when the sign up failed
                 }

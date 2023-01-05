@@ -45,6 +45,7 @@ router.post('/login', async (req, res) => {
       req.session.username = req.body.username; //Save the username
       res.status(200).json({ user: userData, message: 'You are now logged in!' }); //Respond with 200 status and data
     });
+     
   } catch (err) { //Catch error
     res.status(500).json(err); //Respond with status 500 if there is a problem/error
   }
