@@ -8,6 +8,7 @@ const session = require('express-session');
 const exphbs = require('express-handlebars');
 //Import connect-session-sequelize
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
+const { strict } = require('assert');
 //Import the controllers
 const routes = require('./controllers');
 //Import the sequelize connection
@@ -23,7 +24,12 @@ const PORT = process.env.PORT || 3001;
 //Configure sessions
 const sess = {
   secret: 'Super secret secret',
-  cookie: {},
+  cookie: {
+    maxAge: 120000,
+    httpOnly: true,
+    secure: false,
+    sameSite: 'strict',
+  },
   resave: false,
   saveUninitialized: true,
   store: new SequelizeStore({
