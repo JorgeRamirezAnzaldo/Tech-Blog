@@ -33,7 +33,7 @@ const modifyPostHandler = async (event) => {
         if (response.ok) { //If response was ok
             document.location.replace(`/dashboard`); //Go to the dashboard
         } else { //if the response was not ok
-            alert('Failed to delete alert'); //Display alert
+            alert('Failed to delete'); //Display alert
         }
 
     }
