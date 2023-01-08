@@ -28,7 +28,7 @@
 
 ## Enlace a la aplicación:
 
-* [Link a aplicación]()
+* [Link a aplicación](https://programming-blog-site.herokuapp.com/)
   
 ## Esquema de la base de datos
 
@@ -84,7 +84,7 @@
 * En cambio, si deseas registrarte:  
   1. Da clic en el enlace "Sign up".  
     <img src="./images/LinkSignup.JPG" alt="Link Signup" width="700" height="400"/>     
-  2. Luego introduce tu usuario y la contraseña que deseas utilizar y da clic en "Sign Up".     
+  2. Luego introduce tu usuario y la contraseña (debe tener al menos 6 caracteres) que deseas utilizar y da clic en "Sign Up".     
     <img src="./images/SignupData.JPG" alt="Signup Data" width="700" height="400"/> 
   3. Si tus credenciales se guardaron correctamente, verás tu "Dashboard" vacío.  
     <img src="./images/EmptyDashboard.JPG" alt="Empty Dashboard" width="800" height="300"/>  
