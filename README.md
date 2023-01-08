@@ -25,6 +25,10 @@
       * Eliminar la publicación seleccionada presionando el botón "Delete". Esto provocará que se regrese al "Dashboard" donde ya no aparecerá la publicación eliminada.
 * La aplicación permite cerra la sesión desde el enlace "Logout".
 * La sesión del usuario expira después de 4 minutos.
+
+## Enlace a la aplicación:
+
+* [Link a aplicación]()
   
 ## Esquema de la base de datos
 
@@ -122,9 +126,4 @@
     <img src="./images/DeletePost.JPG" alt="Deleted Post" width="800" height="400"/> 
 * Para cerrar sesión, presiona el enlace de "Logout".  
   <img src="./images/LinkLogout.JPG" width="600" height="200"/>  
-
-
-## Animación de funcionalidad de la aplicación
-
-* ![Animación aplicación](./images/Animación.gif)
 
